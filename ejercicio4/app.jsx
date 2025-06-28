@@ -1,16 +1,17 @@
 const {useState} = React
 
 const App = () => {
-    const [izquierdoHabilitado, setIzquierdoHabilitado] = useState (false)
-    const [derechoHabilitado, setDerechoHabilitado] = useState (true)
+    const [izquierdoHabilitado, setIzquierdoHabilitado] = useState (false);
+    const [derechoHabilitado, setDerechoHabilitado] = useState (true);
 
     const toggleIzquierdo = () => {
-        setIzquierdoHabilitado(!izquierdoHabilitado)
-        setDerechoHabilitado(!derechoHabilitado)
+        setIzquierdoHabilitado(!izquierdoHabilitado);
+        setDerechoHabilitado(!derechoHabilitado);
+    }
 
     const toggleDerecho = () => {
-        setIzquierdoHabilitado(!izquierdoHabilitado)
-        setDerechoHabilitado(!derechoHabilitado)
+        setIzquierdoHabilitado(!izquierdoHabilitado);
+        setDerechoHabilitado(!derechoHabilitado);
     }
 
     return (
@@ -19,8 +20,8 @@ const App = () => {
         <button disabled={derechoHabilitado} onClick={toggleDerecho}>Derecho</button>
         </>
     )
-    }
-    const contenedor = document.getElementById("root")
-    const root = ReactDOM.createRoot(contenedor)
-    root.render(<App/>)
 }
+
+const contenedor = document.getElementById("root");
+const root = ReactDOM.createRoot(contenedor);
+root.render(<App/>);
